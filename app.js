@@ -5,6 +5,10 @@ if (port == null || port == "") {
   port = 8000;
 }
 
+app.get('/', (req, res) => {
+  res.send('Why, hello there!');
+})
+
 app.get('/checkWord/:word', (req, res) => {
   console.log(req.params);
   res.send('Hello World!')
