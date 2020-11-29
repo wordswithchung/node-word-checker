@@ -1,6 +1,9 @@
 const express = require('express')
 const app = express()
-const port = 8080
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
 
 app.get('/checkWord/:word', (req, res) => {
   console.log(req.params);
